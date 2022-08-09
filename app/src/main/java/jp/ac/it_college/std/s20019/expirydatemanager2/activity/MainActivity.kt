@@ -9,13 +9,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.work.Data
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import io.realm.Realm
-import io.realm.kotlin.where
-import jp.ac.it_college.std.s20019.expirydatemanager2.ExpiryDate
 import jp.ac.it_college.std.s20019.expirydatemanager2.MyWorker
 import jp.ac.it_college.std.s20019.expirydatemanager2.R
 import jp.ac.it_college.std.s20019.expirydatemanager2.databinding.ActivityMainBinding
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -66,5 +62,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-// てすてす
