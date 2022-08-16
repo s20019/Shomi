@@ -12,8 +12,6 @@ import io.realm.Realm
 import io.realm.Sort
 import io.realm.kotlin.where
 import jp.ac.it_college.std.s20019.expirydatemanager2.ExpiryDate
-import jp.ac.it_college.std.s20019.expirydatemanager2.ExpiryDateAdapter
-import jp.ac.it_college.std.s20019.expirydatemanager2.activity.MainActivity
 import jp.ac.it_college.std.s20019.expirydatemanager2.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -45,20 +43,10 @@ class FirstFragment : Fragment() {
 
         binding.list.layoutManager = LinearLayoutManager(context)
         val expirydates = realm.where<ExpiryDate>().findAll().sort("date", Sort.ASCENDING)  //  最後のsortで、ListViewを日付の昇順で並び替え
-        val adapter = ExpiryDateAdapter(expirydates)
-        binding.list.adapter = adapter
-
-        adapter.setOnItemClickListener { id ->
-            id?.let {
-                val action = FirstFragmentDirections.actionToExpirydateEditFragment(it)
-                findNavController().navigate(action)
-            }
-        }
     }
 
     override fun onResume() {
         super.onResume()
-        (activity as? MainActivity)?.setFabVisible(View.VISIBLE)
     }
 
     override fun onDestroyView() {

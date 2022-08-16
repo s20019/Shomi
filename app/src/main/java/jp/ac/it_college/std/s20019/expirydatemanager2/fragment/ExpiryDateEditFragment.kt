@@ -69,8 +69,7 @@ class ExpiryDateEditFragment : Fragment() {
             binding.deleteButton.visibility = View.INVISIBLE
             binding.linkText.visibility = View.INVISIBLE
         }
-
-        (activity as? MainActivity)?.setFabVisible(View.INVISIBLE)
+        
 
         // 保存ボタンをタップした時の処理
         binding.saveButton.setOnClickListener {
