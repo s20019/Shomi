@@ -15,14 +15,14 @@
     <string name="date_sample">2021/12/22</string>
     <string name="title_sample">マヨネーズ</string>
     <string name="expired_text">賞味期限切れ</string>
-    <string name="action_settings">設定</string>
+    <string name="action_settings">アプリ設定</string>
     <string name="title_activity_sign_in">SignInActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="fruits_text">フルーツ</string>
+    <string name="vegetable_text">野菜</string>
+    <string name="drink_text">ドリンク</string>
+    <string name="snack_text">おかし</string>
+    <string name="niku_text">肉</string>
+    <string name="action_customize">カスタマイズ</string>
+    <string name="action_friend">フレンド登録</string>
+    <string name="action_profile">プロフィール</string>
 </resources>
