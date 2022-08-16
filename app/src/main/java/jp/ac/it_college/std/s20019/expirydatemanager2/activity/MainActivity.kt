@@ -1,11 +1,10 @@
 package jp.ac.it_college.std.s20019.expirydatemanager2.activity
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.work.Data
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
@@ -22,30 +21,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
 
         // 常にダークテーマをOFFにする処理
         AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
 
-        val naviController = findNavController(R.id.nav_host_fragment_content_main)
-        // 画面上部のアクションバーに、戻るボタンを追加する処理
-        setupActionBarWithNavController(naviController)
 
         notification()
 
-        binding.fab.setOnClickListener { view ->
-            naviController.navigate(R.id.action_to_expirydateEditFragment)
-        }
     }
 
-    // 前の画面に遷移する処理
-    override fun onSupportNavigateUp() =
-        findNavController(R.id.nav_host_fragment_content_main).navigateUp()
-
-    // ExpiryDateEditFragmentに遷移した後、fabボタンを非表示にする時に使う処理
-    fun setFabVisible(visibility: Int) {
-        binding.fab.visibility = visibility
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
     }
+
 
     private fun notification() {
         val data = Data.Builder().build()
