@@ -25,4 +25,5 @@
     <string name="action_customize">カスタマイズ</string>
     <string name="action_friend">フレンド登録</string>
     <string name="action_profile">プロフィール</string>
+    <string name="action_end">終了</string>
 </resources>
