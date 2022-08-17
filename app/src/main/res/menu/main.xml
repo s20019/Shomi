@@ -19,4 +19,9 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_end"
+        android:title="@string/action_end"
+        android:visible="false"
+        app:showAsAction="never" />
 </menu>
