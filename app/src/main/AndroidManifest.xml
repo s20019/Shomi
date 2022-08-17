@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpiryDateManager2">
         <activity
+            android:name=".activity.ItemListActivity"
+            android:label="フルーツ"
+            android:exported="false" />
+        <activity
             android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
