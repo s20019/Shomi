@@ -9,17 +9,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
-import androidx.work.Data
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
-import jp.ac.it_college.std.s20019.expirydatemanager2.MyWorker
 import jp.ac.it_college.std.s20019.expirydatemanager2.R
 import jp.ac.it_college.std.s20019.expirydatemanager2.databinding.ActivityMainBinding
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val manager = WorkManager.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +30,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CreateCategoryActivity::class.java)
             startActivity(intent)
         }
-
-        notification()
-
     }
 
     // アプリバーにメニューアイコンを表示する処理
@@ -92,21 +83,5 @@ class MainActivity : AppCompatActivity() {
             menu?.findItem(R.id.action_end)?.isVisible = false
         }
         return super.onPrepareOptionsMenu(menu)
-    }
-
-
-    private fun notification() {
-        val data = Data.Builder().build()
-
-        if (manager.getWorkInfosByTag("FLAG").get().size == 0) {
-            val saveRequest = PeriodicWorkRequestBuilder<MyWorker>(
-                15, TimeUnit.MINUTES,
-                14, TimeUnit.MINUTES
-            )
-                .addTag("FLAG")
-                .setInputData(data)
-                .build()
-            manager.enqueue(saveRequest)
-        }
     }
 }
