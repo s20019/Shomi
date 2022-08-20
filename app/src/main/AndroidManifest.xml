@@ -5,9 +5,9 @@
     <application
         android:name=".ExpiryDateManagerApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_calendar"
+        android:icon="@mipmap/ic_new_calendar"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_calendar_round"
+        android:roundIcon="@mipmap/ic_new_calendar_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpiryDateManager2">
         <activity

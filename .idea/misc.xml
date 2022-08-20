@@ -23,6 +23,9 @@
         <entry key="app/src/main/res/menu/main.xml" value="0.3453125" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.346875" />
         <entry key="app/src/main/res/menu/sub.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_calendar.xml" value="0.307" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_calendar_round.xml" value="0.307" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_new_calendar.xml" value="0.307" />
       </map>
     </option>
   </component>
