@@ -26,4 +26,21 @@
     <string name="action_friend">フレンド登録</string>
     <string name="action_profile">プロフィール</string>
     <string name="action_end">終了</string>
+    <string name="create_category_text">新しいカテゴリーを作成する</string>
+    <string name="categoryname_text">カテゴリー名</string>
+    <string name="action_sign_in_short">サインイン</string>
+    <string name="prompt_username">ユーザーネーム</string>
+    <string name="dirt_not_register">アカウントをお持ちでない方</string>
+    <string name="action_log_in">ログイン</string>
+    <string name="password_text">パスワード</string>
+    <string name="password_confirmation_text">パスワード確認</string>
+    <string name="register_now_text">今すぐ登録する</string>
+    <string name="action_sign_up">サインアップ</string>
+    <string name="sign_up_confirm_text">サインアップ確認</string>
+    <string name="action_move_on">進む</string>
+    <string name="prompt_starlight_anya">スターライトアーニャ</string>
+    <string name="user_id_text">あなたのユーザーID</string>
+    <string name="user_id">012345</string>
+    <string name="information_statement">ユーザーIDは保存しておいてください</string>
+    <string name="ok_text">OK</string>
 </resources>
