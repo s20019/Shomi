@@ -11,17 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpiryDateManager2">
         <activity
-            android:name=".activity.ItemListActivity"
-            android:label="フルーツ"
+            android:name=".activity.SignUpConfirmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CreateCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SignInActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.SignInActivity"
             android:exported="true"
             android:theme="@style/Theme.ExpiryDateManager2">
             <intent-filter>
