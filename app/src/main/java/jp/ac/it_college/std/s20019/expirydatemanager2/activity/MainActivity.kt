@@ -1,9 +1,11 @@
 package jp.ac.it_college.std.s20019.expirydatemanager2.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
@@ -26,6 +28,14 @@ class MainActivity : AppCompatActivity() {
 
         // 常にダークテーマをOFFにする処理
         AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+
+        val username = intent.getStringExtra("USER_NAME")
+        Toast.makeText(applicationContext, "ようこそ ${username}さん", Toast.LENGTH_SHORT).show()
+
+        binding.addBtn.setOnClickListener {
+            val intent = Intent(this, CreateCategoryActivity::class.java)
+            startActivity(intent)
+        }
 
         notification()
 
