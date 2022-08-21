@@ -3,7 +3,6 @@
     package="jp.ac.it_college.std.s20019.expirydatemanager2">
 
     <application
-        android:name=".ExpiryDateManagerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_new_calendar"
         android:label="@string/app_name"
