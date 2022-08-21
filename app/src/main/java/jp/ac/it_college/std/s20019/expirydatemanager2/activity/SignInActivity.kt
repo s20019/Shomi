@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import jp.ac.it_college.std.s20019.expirydatemanager2.R
+import androidx.appcompat.app.AppCompatDelegate
 import jp.ac.it_college.std.s20019.expirydatemanager2.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity(), TextWatcher {
@@ -16,6 +16,9 @@ class SignInActivity : AppCompatActivity(), TextWatcher {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 常にダークテーマをOFFにする処理
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         // 「今すぐ登録」を押したときの処理
         binding.registerNowText.setOnClickListener {
