@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpiryDateManager2">
         <activity
+            android:name=".activity.ProfileActivity"
+            android:label="プロフィール"
+            android:exported="false" />
+        <activity
             android:name=".activity.SignUpConfirmActivity"
             android:exported="false" />
         <activity
