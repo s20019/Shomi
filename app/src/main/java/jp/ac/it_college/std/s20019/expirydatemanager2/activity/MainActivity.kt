@@ -1,10 +1,13 @@
 package jp.ac.it_college.std.s20019.expirydatemanager2.activity
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -42,7 +45,15 @@ class MainActivity : AppCompatActivity() {
     // それぞれのメニューがタップされた時の処理
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            // 「カスタマイズ」がタップされた時
             R.id.action_customize -> {
+                // カスタマイズモード中にアクションバーの色を変える処理
+                supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#2196F3")))
+
+                // アクションバーの色の変更に伴い、ステータスバーの色をアクションバーに合わせる処理
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.statusBarColor = Color.parseColor("#2196F3")
+
                 binding.imgDeleteBtn1.visibility = View.VISIBLE
                 binding.imgDeleteBtn2.visibility = View.VISIBLE
                 binding.imgDeleteBtn3.visibility = View.VISIBLE
@@ -50,7 +61,12 @@ class MainActivity : AppCompatActivity() {
                 binding.imgDeleteBtn5.visibility = View.VISIBLE
                 true
             }
+            // 「終了」がタップされた時
             R.id.action_end -> {
+                supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#FF018786")))
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.statusBarColor = Color.parseColor("#FF018786")
+
                 binding.imgDeleteBtn1.visibility = View.INVISIBLE
                 binding.imgDeleteBtn2.visibility = View.INVISIBLE
                 binding.imgDeleteBtn3.visibility = View.INVISIBLE
