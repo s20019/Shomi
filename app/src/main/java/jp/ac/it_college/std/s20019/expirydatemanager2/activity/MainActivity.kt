@@ -74,6 +74,11 @@ class MainActivity : AppCompatActivity() {
                 binding.imgDeleteBtn5.visibility = View.INVISIBLE
                 true
             }
+            R.id.action_profile -> {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
