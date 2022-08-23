@@ -23,8 +23,24 @@ class ProfileActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = Color.parseColor("#F1BECF")
 
-        binding.imageView3.setOnClickListener {
-            binding.profileImg.setImageResource(R.drawable.fruits)
+        binding.potatoIcon.setOnClickListener {
+            binding.profileImg.setImageResource(R.drawable.potato_icon)
+        }
+
+        binding.pimanIcon.setOnClickListener {
+            binding.profileImg.setImageResource(R.drawable.piman_icon)
+        }
+
+        binding.orangeIcon.setOnClickListener {
+            binding.profileImg.setImageResource(R.drawable.orange_icon)
+        }
+
+        binding.edamameIcon.setOnClickListener {
+            binding.profileImg.setImageResource(R.drawable.edamame_icon)
+        }
+
+        binding.tomatoIcon.setOnClickListener {
+            binding.profileImg.setImageResource(R.drawable.tomato_icon)
         }
     }
 }
